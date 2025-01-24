@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>神南小学校×トキキル<br>正誤判定ページ</h1>
+    <p>謎の答えがわかったら入力し、<br>「解答する」ボタンを押してください。</p>
+    <p>謎に正解すると、服の購入が可能になります。</p>
+    <div>
+
+      <input id="answer" class="text-box" placeholder="解答を入力">
+    </div>
+    <div>
+      <input type="button" value="解答する" onclick="check()" class="nomal-button">
+    </div>
+    <p id="miss">　</p>
+
+    <div class="layer modal1">
+      <div class="modal">
+        <div class="modal__inner">
+          <div class="modal__contents">
+            <div class="modal__content">
+              <h3>解読成功!!!</h3>
+              <img src="assets/clear1.png" alt="">
+              <p>制作秘話は<a href="https://note.com/preview/nf51a7951801e?prev_access_key=01944b664c41aa843793d5de939a7b6d">こちら</a></p>
+              <input type="button" value="閉じる" onclick="closeModal()" class="nomal-button">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="layer modal2">
+      <div class="modal">
+        <div class="modal__inner">
+          <div class="modal__contents">
+            <div class="modal__content">
+              <h3>解読成功!!!</h3>
+              <img src="assets/clear2.png" alt="">
+              <p>制作秘話は<a href="https://note.com/preview/n1f7d83fda019?prev_access_key=9abce0369496a8a33047a6c6fb9b9574">こちら</a></p>
+              <input type="button" value="閉じる" onclick="closeModal()" class="nomal-button">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="layer modal3">
+      <div class="modal">
+        <div class="modal__inner">
+          <div class="modal__contents">
+            <div class="modal__content">
+              <h3>解読成功!!!</h3>
+              <img src="assets/clear3.png" alt="">
+              <p>制作秘話は<a href="https://note.com/preview/nf348d93284c3?prev_access_key=06f38482a0634694aaea9baae022c247">こちら</a></p>
+              <input type="button" value="閉じる" onclick="closeModal()" class="nomal-button">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="layer notyetmodal1">
+      <div class="modal">
+        <div class="modal__inner">
+          <div class="modal__contents">
+            <div class="modal__content">
+              <h3>5年1組</h3>
+              <img src="assets/notyet1.png" alt="">
+              <input type="button" value="閉じる" onclick="closeModal()" class="nomal-button">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="layer notyetmodal2">
+      <div class="modal">
+        <div class="modal__inner">
+          <div class="modal__contents">
+            <div class="modal__content">
+              <h3>5年2組</h3>
+              <img src="assets/notyet2.png" alt="">
+              <input type="button" value="閉じる" onclick="closeModal()" class="nomal-button">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="layer notyetmodal3">
+      <div class="modal">
+        <div class="modal__inner">
+          <div class="modal__contents">
+            <div class="modal__content">
+              <h3>5年3組</h3>
+              <img src="assets/notyet3.png" alt="">
+              <input type="button" value="閉じる" onclick="closeModal()" class="nomal-button">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+                
+    <div class="field">
+      <div class="card" id="undeciphered-1" onclick="openNotYetModal1()">
+        <p class="card-title">5年1組</p>
+        <!-- 服に飛べるように -->
+        <p class="card-contents">未解読</p>
+      </div>
+      <div class="card" id="deciphered-1" style="display: none;" onclick="openModal1()">
+        <p class="card-title">5年1組</p>
+        <p class="card-contents">解読成功</p>    
+      </div>
+
+      <div class="card" id="undeciphered-2" onclick="openNotYetModal2()">
+        <p class="card-title">5年2組</p>
+        <p class="card-contents">未解読</p>
+      </div>
+      <div class="card" id="deciphered-2" style="display: none;" onclick="openModal2()">
+        <p class="card-title">5年2組</p>
+        <p class="card-contents">解読成功</p>    
+      </div>
+
+      <div class="card" id="undeciphered-3" onclick="openNotYetModal3()">
+        <p class="card-title">5年3組</p>
+        <p class="card-contents">未解読</p>
+      </div>
+      <div class="card" id="deciphered-3" style="display: none;" onclick="openModal3()">
+        <p class="card-title">5年3組</p>
+        <p class="card-contents">解読成功</p>    
+      </div>
+    </div>
+    <div class="additional">
+      <p>※ タップして洋服のデザインを確認できます。</p>
+    </div>
+
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>
